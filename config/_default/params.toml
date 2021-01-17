@@ -172,8 +172,8 @@ sharing = true
 ############################
 
 [instructor]
-  name = Dr. Andrew Heiss
-  email = aheiss@gsu.edu
+  name = "Dr. Andrew Heiss"
+  email = "aheiss@gsu.edu"
   url = "https://www.andrewheiss.com"
   twitter = andrewheiss
   github = andrewheiss
