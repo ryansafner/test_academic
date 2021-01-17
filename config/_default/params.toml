@@ -6,7 +6,7 @@ microsoft_clarity = ""
 
 # Color theme.
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`, `strawberry`.
-color_theme = "default"
+color_theme = "strawberry"
 # Enable users to switch between day and night mode?
 day_night = true
 
@@ -35,7 +35,7 @@ highlight = true
 
 # Enable global LaTeX math rendering?
 #   If false, you can enable it locally on a per page basis.
-math = false
+math = true
 
 # Privacy pack
 #   Show a cookie consent message to visitors
@@ -67,10 +67,10 @@ appointment_url = "https://calendly.com"
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
-  {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
+  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/ryansafner"},
+  #{icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
+  #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
+  #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
   ]
 
@@ -163,3 +163,43 @@ sharing = true
     api_key = ""
     index_name = ""
     show_logo = false
+
+############################
+## Contact details
+##
+## These details power the Contact widget (if enabled).
+## Additionally, for organizations, these details may be used to enrich search engine results.
+############################
+
+author: Andrew Heiss
+
+instructor: 
+  name: Dr. Andrew Heiss
+  email: aheiss@gsu.edu
+  url: "https://www.andrewheiss.com"
+  twitter: andrewheiss
+  github: andrewheiss
+  office: "357 Andrew Young School"
+  contact_policy: >-
+    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
+  appointment_url: https://calendly.com/andrewheiss/meeting/
+
+course:
+  number: "PMAP 8141"
+  semester: "Summer 2020"
+  days: "Every day"
+  time: "Whenever"
+  # location: "Online only (thanks, COVID-19, for ruining everything)"
+  dates: "June 8–July 31, 2020"
+  github: "andrewheiss/econs20.classes.andrewheiss.com"
+  copyrightYear: "2020"
+  slack: "https://gsuecons2020.slack.com"
+
+university: 
+  name: Georgia State University
+  url: "https://www.gsu.edu"
+
+school:
+  name: Andrew Young School of Policy Studies
+  url: "https://aysps.gsu.edu/"
+
