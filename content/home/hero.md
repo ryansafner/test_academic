@@ -5,10 +5,10 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
-title = "Academia"
+title = "Economics of the Law"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = "user-2.jpg"
+hero_media = "econ_hires.png"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -20,28 +20,22 @@ hero_media = "user-2.jpg"
   color = "#fff"
   
   # Background gradient.
-  # gradient_start = "#4bb4e3"
-  # gradient_end = "#000"
+   gradient_start = "#5e81ac"
+   gradient_end = "#81a1c1"
   
   # Background image.
   # image = ""  # Name of image in `static/img/`.
   # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
-  text_color_light = false
+  text_color_light = true
 
 # Call to action links (optional).
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
-[btn]
-  url = "/authors/admin"
-  label = "Know more"
-  
-[btn_alt]
-  url = "#contact"
-  label = "Contact me"
 
+[cta_note]
+label = "PMAP 8141 • Summer 2020<br>Andrew Young School of Policy Studies<br>Georgia State University"
 +++
-## My name is **Michael Vahn** and I'm a **Professor** specializing in **Artificial Intelligence**
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.
+**Learn law & economics!**

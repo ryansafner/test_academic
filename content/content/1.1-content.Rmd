@@ -1,0 +1,17 @@
+---
+title: "Capitalism and measurement"
+draft: false
+linktitle: "The 1"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 1
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+## Readings
+
