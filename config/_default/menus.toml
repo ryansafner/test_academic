@@ -15,7 +15,7 @@
 
 [[main]]
   name = "Schedule"
-  url = "/schedule/"
+  url = "/schedule"
   weight = 30
 
 [[main]]
