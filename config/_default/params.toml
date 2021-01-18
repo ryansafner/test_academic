@@ -172,30 +172,30 @@ sharing = true
 ############################
 
 [instructor]
-  name = "Dr. Andrew Heiss"
-  email = "aheiss@gsu.edu"
-  url = "https://www.andrewheiss.com"
-  twitter = "andrewheiss"
-  github = "andrewheiss"
-  office = "357 Andrew Young School"
- # contact_policy = "E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
+  name = "Dr. Ryan Safner"
+  email = "safner@hood.edu"
+  url = "https://www.ryansafner.com"
+  twitter = "ryansafner"
+  github = "ryansafner"
+  office = "218 Rosenstock"
+  contact_policy = "E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!"
 
 [course]
-  number = "PMAP 8141"
-  semester = "Summer 2020"
-  days = "Every day"
-  time = "Whenever"
+  number = "ECON 315"
+  semester = "Spring 2021"
+  days = "TuTh"
+  time = "2:00PM"
   # location: "Online only (thanks, COVID-19, for ruining everything)"
   dates = "June 8–July 31, 2020"
-  github = "andrewheiss/econs20.classes.andrewheiss.com"
-  copyrightYear = "2020"
-  slack = "https://gsuecons2020.slack.com"
+  github = "ryansafner/lawS21.classes.ryansafner.com"
+  copyrightYear = "2021"
+  slack = "https://hoodcollegeeconomics.slack.com"
 
 [university]
-  name = "Georgia State University"
-  url = "https://www.gsu.edu"
+  name = "Hood College"
+  url = "https://www.hood.edu"
 
 [school]
-  name = "Andrew Young School of Policy Studies"
-  url = "https://aysps.gsu.edu/"
+  name = "George B. Delaplaine, Jr. School of Business"
+  url = "https://www.hood.edu/academics/departments/george-b-delaplaine-jr-school-business"
 
