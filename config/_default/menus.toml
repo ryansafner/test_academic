@@ -15,12 +15,12 @@
 
 [[main]]
   name = "Schedule"
-  url = "/schedule"
+  url = "/schedule/"
   weight = 30
 
 [[main]]
   name = "Syllabus"
-  url = "/syllabus"
+  url = "/syllabus/"
   weight = 40
 
 [[main]]
