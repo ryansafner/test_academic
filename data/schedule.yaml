@@ -1,162 +1,151 @@
 lessons:
-  - title: 'Capitalism, markets, and public policy'
+  - title: '<span class="fake-header-table">I. Rational Choice Theory: Consumers</span>'
     header: True
 
-  - title: '<span class="content-title">Capitalism and measurement</span>'
-    session: "Session 1"
-    date: "June 8–June 12"
-    content: "01-content"
-    bg: 1
+  - title: "Preliminary Survey"
+    assignment: "00-preliminary-survey"
 
-  - title: '<span class="content-title">Governments and institutions</span>'
-    session: "Session 2"
-    content: "02-content"
-    bg: 1
+  - title: "1.1 The Tools of Microeconomics"
+    content: "1.1-content"
+    slides: "1.1-slides"
 
-  - title: 'Problem set 1 due'
-    date: "June 15"
-    assignment: "01-problem-set"
-    bg: 1
-
-  - title: 'Weekly report 1 due'
-    date: "June 15"
-    assignment: "01-weekly-report"
-    bg: 1
-    bottomborder: True
- 
-  - title: '<span class="content-title">Social interactions and economic outcomes</span>'
-    session: "Session 3"
-    date: "June 15–19"
-    content: "03-content"
-    bg: 2
-
-  - title: '<span class="content-title">Fairness and efficiency</span>'
-    session: "Session 4"
-    content: "04-content"
-    bg: 2
-
-  - title: 'Problem set 2 due'
-    date: "June 22"
-    assignment: "02-problem-set"
-    bg: 2
-
-  - title: 'Weekly report 2 due'
-    date: "June 22"
-    assignment: "02-weekly-report"
-    bg: 2
-
-  - title: 'Economic models'
-    header: True
-
-  - title: '<span class="content-title">Work, wellbeing, and scarcity</span>'
-    session: "Sessions 5–6"
-    date: "June 22–26"
-    content: "05-content"
-    bg: 1
-
-  - title: 'Problem set 3 due'
-    date: "June 29"
-    assignment: "03-problem-set"
-    bg: 1
-
-  - title: 'Weekly report 3 due'
-    date: "June 29"
-    assignment: "03-weekly-report"
-    bg: 1
-    bottomborder: True
-   
-  - title: '<span class="content-title">The firm</span>'
-    session: "Sessions 7–8"
-    date: "June 29–July 3"
-    content: "07-content"
-    bg: 2
-
-  - title: 'Problem set 4 due'
-    date: "July 6"
-    assignment: "04-problem-set"
-    bg: 2
-
-  - title: 'Weekly report 4 due'
-    date: "July 6"
-    assignment: "04-weekly-report"
-    bg: 2
-    bottomborder: True
-
-  - title: '<span class="content-title">Firms and markets</span>'
-    session: "Sessions 9–10"
-    date: "July 6–10"
-    content: "09-content"
-    bg: 1
-
-  - title: 'Problem set 5 due'
-    date: "July 13"
-    assignment: "05-problem-set"
-    bg: 1
-
-  - title: 'Weekly report 5 due'
-    date: "July 13"
-    assignment: "05-weekly-report"
-    bg: 1
+  - title: "1.2 Budget Constraint"
+    content: "1.2-content"
+    slides: "1.2-slides"
+    practice: "1.2-practice"
   
-  - title: '<i class="fas fa-star"></i> **Exam 1**'
-    date: "July 10–July 17"
-    bg: 3
-
-  - title: 'Market failures and institutions'
-    header: True
+  - title: "1.3 Preferences"
+    content: "1.3-content"
+    slides: "1.3-slides"
     
-  - title: '<span class="content-title">Institutions, power, and inequality</span>'
-    session: "Session 11"
-    date: "July 13-17"
-    content: "11-content"
-    bg: 1
+  - title: "1.4 Utility Maximization"
+    content: "1.4-content"
+    slides: "1.4-slides"
+    practice: "1.4-practice"
 
-  - title: '<span class="content-title">Market failures</span>'
-    session: "Session 12"
-    content: "12-content"
-    bg: 1
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1** due *Wed Feb 17*'
+    assignment: "01-problem-set"
 
-  - title: 'Problem set 6 due'
-    date: "July 20"
-    assignment: "06-problem-set"
-    bg: 1
+  - title: "1.5 Demand"
+    content: "1.5-content"
+    slides: "1.5-slides"
+    practice: "1.5-practice"
 
-  - title: 'Weekly report 6 due'
-    date: "July 20"
-    assignment: "06-weekly-report"
-    bg: 1
-    bottomborder: True
-
-  - title: '<span class="content-title">When governments go wrong</span>'
-    session: "Session 13"
-    date: "July 20–24"
-    content: "13-content"
-    bg: 2
-
-  - title: '<span class="content-title">Institutional alternatives</span>'
-    session: "Session 14"
-    content: "14-content"
-    bg: 2
-
-  - title: 'Problem set 7 due'
-    date: "July 27"
-    assignment: "07-problem-set"
-    bg: 2
-
-  - title: 'Weekly report 7 due'
-    date: "July 27"
-    assignment: "07-weekly-report"
-    bg: 2
-
-  - title: 'Conclusions'
+  - title: "1.6 Income and Substitution Effects"
+    content: "1.6-content"
+    slides: "1.6-slides"
+  
+  - title: "1.7 Price Elasticity"
+    content: "1.7-content"
+    slides: "1.7-slides"
+    practice: "1.7-practice"
+    
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 2** due Sun Feb 28'
+    assignment: "02-problem-set"
+  
+  - title: '<i class="fas fa-star"></i> **Exam 1** week of Mar 1'
+    assignment: "01-exam"
+   
+  - title: '<span class="fake-header-table">II. Rational Choice Theory: Producers</span>'
     header: True
 
-  - title: '<span class="content-title">Markets, public policy, and public administration</span>'
-    session: "Session 15"
-    date: "July 27"
-    content: "15-content"
-    bg: 1
+  - title: "2.1 Production, Specialization, and Firms"
+    content: "2.1-content"
+    slides: "2.1-slides"
+    
+  - title: "2.2 Short Run and Long Run Production"
+    content: "2.2-content"
+    slides: "2.2-slides"
 
-  - title: '<i class="fas fa-star"></i> **Exam 2**'
-    date: "July 28–August 1"
-    bg: 3
+  - title: "2.3 Cost Minimization"
+    content: "2.3-content"
+    slides: "2.3-slides"
+    practice: "2.3-practice"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 3** due Sun Mar 14/21'
+    assignment: "03-problem-set"
+    
+  - title: "2.4 Costs of Production"
+    content: "2.4-content"
+    slides: "2.4-slides"
+
+  - title: "2.5 Short Run Profit Maximization"
+    content: "2.5-content"
+    practice: "2.5-practice"
+    slides: "2.5-slides"
+    
+  - title: "2.6 Long Run Industry Equilibrium"
+    content: "2.6-content"
+    slides: "2.6-slides"
+    
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4** due Sun Mar 28/Sun April 4'
+    assignment: "04-problem-set"
+    
+  - title: '<i class="fas fa-star"></i> **Exam 2** week of April 5'
+    assignment: "02-exam"
+
+  - title: '<span class="fake-header-table">III. Market Equilibrium</span>'
+    header: True
+
+  - title: "3.1 The Supply and Demand Model"
+    content: "3.1-content"
+    slides: "3.1-slides"
+
+  - title: "3.2 Market Competition and Surpluses"
+    content: "3.2-content"
+    slides: "3.2-slides"
+    practice: "3.2-practice"
+
+  - title: "3.3 Entrepreneurship, Profits, & Prices"
+    content: "3.3-content"
+    slides: "3.3-slides"
+    
+  - title: "3.4 Welfare Economics & Market Failures"
+    content: "3.4-content"
+    slides: "3.4-slides"
+    
+  - title: "3.5 Political Economy"
+    content: "3.5-content"
+    slides: "3.5-slides"
+    
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5** due Sun Apr 25'
+    assignment: "05-problem-set"
+
+  - title: '<span class="fake-header-table">IV. Imperfect Competition</span>'
+    header: True
+
+  - title: "4.1 Modeling Firms with Market Power"
+    content: "4.1-content"
+    slides: "4.1-slides"
+    practice: "4.1-practice"
+
+  - title: "4.2 Consequences and Sources of Market Power"
+    content: "4.2-content"
+    slides: "4.2-slides"
+
+  - title: "4.3 Pricing Strategies"
+    content: "4.3-content"
+    slides: "4.3-slides"
+    practice: "4.3-practice"
+    
+  - title: "4.4 Factor Markets: Labor Markets"
+    content: "4.4-content"
+    slides: "4.4-slides"
+    practice: "4.4-practice"
+
+  - title: "4.5 Monopolistic Competition and Oligopoly"
+    content: "4.5-content"
+    slides: "4.5-slides"
+    
+  - title: "4.6 Contestable Markets and Wrap Up"
+    content: "4.6-content"
+    slides: "4.6-slides"
+    
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6** (Ungraded Practice)'
+    assignment: "06-problem-set"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Op-Ed** Due Fri May 14'
+    assignment: "op-ed"
+
+  - title: '<i class="fas fa-star"></i> **Final Exam** week of May 16'
+    assignment: "03-exam"
