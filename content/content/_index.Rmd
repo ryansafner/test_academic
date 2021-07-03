@@ -1,5 +1,5 @@
 ---
-title: Readings, lectures, and videos
+title: Course Content
 menu:
   content:
     parent: Outline

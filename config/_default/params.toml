@@ -67,7 +67,7 @@ appointment_url = "https://calendly.com"
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/ryansafner"},
+  #{icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/ryansafner"},
   #{icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
   #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
@@ -126,7 +126,7 @@ section_pager = false
 docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
-sharing = true
+sharing = false
 
 # Configuration of publication pages.
 [publications]
@@ -187,7 +187,7 @@ sharing = true
   time = "2:00PM"
   # location: "Online only (thanks, COVID-19, for ruining everything)"
   dates = "June 8–July 31, 2020"
-  github = "ryansafner/lawS21.classes.ryansafner.com"
+  github = "ryansafner/lawS21"
   copyrightYear = "2021"
   slack = "https://hoodcollegeeconomics.slack.com"
 
