@@ -1,7 +1,7 @@
 ---
 title: "1.4 — Utility Maximization — Class Content"
 draft: false
-linktitle: "Utility Maximization"
+linktitle: "1.4 — Utility Maximization"
 date: "2020-06-08"
 menu:
   content:

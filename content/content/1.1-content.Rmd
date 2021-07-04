@@ -1,12 +1,12 @@
 ---
-title: "The Tools of Microeconomics — Class Content"
+title: "1.1 — The Tools of Microeconomics — Class Content"
 draft: false
-linktitle: "The Tools of Microeconomics"
+linktitle: "1.1 — The Tools of Microeconomics"
 date: "2020-06-08"
 menu:
   content:
     parent: Course content
-    weight: 2
+    weight: 1
 type: docs
 output:
   blogdown::html_page:

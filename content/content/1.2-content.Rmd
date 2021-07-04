@@ -1,7 +1,7 @@
 ---
 title: "1.2 — Budget Constraint — Class Content"
 draft: false
-linktitle: "Budget Constraint"
+linktitle: "1.2 — Budget Constraint"
 date: "2020-06-08"
 menu:
   content:

@@ -1,7 +1,7 @@
 ---
 title: "2.1 — Production, Specialization, and Firms — Class Content"
 draft: false
-linktitle: "Production, Specialization, and Firms"
+linktitle: "2.1 — Production, Specialization, and Firms"
 date: "2020-06-08"
 menu:
   content:
