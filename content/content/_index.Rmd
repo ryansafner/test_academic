@@ -3,9 +3,9 @@ title: Overview
 menu:
   content:
     parent: Course content
-    weight: 0
+    weight: 1
 type: docs
-weight: 0
+weight: 1
 ---
 
 Each class session has a set of required readings that you should complete ***before*** watching the lecture. 
