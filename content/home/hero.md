@@ -5,10 +5,10 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
-title = "Economics of the Law"
+title = "Microeconomic Analysis"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = "econ_hires.png"
+hero_media = "micro_hex.png"
 
 [design.background]
   # Apply a background color, gradient, or image.

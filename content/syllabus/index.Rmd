@@ -10,18 +10,11 @@ output:
     fig_caption: false
 ---
 
-```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-library(dplyr)
-library(tibble)
-library(pander)
-```
-
-`r blogdown::shortcode("courseinfo")`
-
 ```{r load-libraries, message=FALSE, warning=FALSE, include=FALSE}
 library(dplyr)
 library(tibble)
 library(pander)
+library(kableExtra)
 ```
 
 - [<i class="fas fa-file-pdf"></i> Download as PDF](/files/syllabus-pdf.pdf)
@@ -65,28 +58,39 @@ See my [tips for success in this course](/reference#tips).
 
 # Required Course materials 
 
-This course requires regular online internet access. If you know you will be unable to access the internet regularly, please let me know and we can make arrangements.
-
-You can find all course materials at my **dedicated website** for this course: [microS21.classes.ryansafner.com](https://microS21.classes.ryansafner.com). Links to the website are posted on our Blackboard course page. Please familiarize yourself with the website, see that it contains this [syllabus](https://microS21.classes.ryansafner.com/syllabus/), guides for your [reference](https://microS21.classes.ryansafner.com/reference/), and our [schedule](https://microS21.classes.ryansafner.com/schedule/). On the schedule page, you can find each module with its own class page (**start there!**) along with all related readings, lecture slides, practice problems, and assignments.
+You can find all course materials at my **dedicated website** for this course: [gameF21.classes.ryansafner.com](https://gameF21.classes.ryansafner.com). Links to the website are posted on our Blackboard course page. Please familiarize yourself with the website, see that it contains this [syllabus](https://gameF21.classes.ryansafner.com/syllabus/), guides for your [reference](https://gameF21.classes.ryansafner.com/reference/), and our [schedule](https://gameF21.classes.ryansafner.com/schedule/). On the schedule page, you can find each module with its own class page (**start there!**) along with all related readings, lecture slides, practice problems, and assignments.
 
 My lecture slides will be shared with you, and serve as your primary resource, but our main "textbook" below is **recommended** as the next best resource and will be available from the campus bookstore. I will discuss more about textbooks and materials in the first module.
 
 ## Books 
 
-1. Goolsbee, Austan, Steven Levitt, and Chad Syverson, 2012, *Microeconomics* 2nd ed, USA: Worth Publishers, ISBN: 978-1464187025
+My lecture slides (made available to you) are the primary resource for the material and the best guide to prepare for homeworks and exams. There are two books that we will roughly be following in parallel, both available at the bookstore (or you can find them on Amazon, ebay, etc). You may choose to purchase used or old versions, but be aware that content and ordering may slightly vary across versions. 
 
-You are welcome to purchase the book by other means (e.g. Amazon, half.com, etc). I have no financial stake in requiring you to purchase this book. You are welcome to use previous version of the book, but carefully verify the reading assignments, as the material may be different across versions.
+1. Dixit, Avinash K and Barry J Nalebuff, 2008, *The Art of Strategy: A Game Theorist's Guide to Success in Business and Life*, New York: W.W. Norton and Company
+2. Dixit, Avinash K, Susan Skeath, and David H Reily Jr, 2014, *Games of Strategy*, 4^th^ ed, New York: W.W. Norton and Company
+3. Purchase a Moblab account ($10) at [moblab.com](http://moblab.com) 
 
-# Assignments and Grades 
+The first book is a popular, read-on-the-beach style paperback that covers the topics in a readable way. It is listed as **required** in the bookstore, and should be fairly cheap on Amazon. It mirrors the topics in the next book in roughly the same order but certainly at a more general (and less mathematical) manner.
 
-Your final course grade is the weighted average of the following assignments. You can find general descriptions for all the assignments on the [assignments page](http://microS21.classes.ryansafner.com/assignments/) and more specific information and examples on each assignment's page on the [schedule page](http://microS21.classes.ryansafner.com/schedule/). 
+The second book is the more common textbook-style As with any textbook, this will be more expensive but a deeper dive into the material that may help with your understanding. It is listed as **recommended** in the bookstore.
+
+If you purchase the second book, it is superfluous for you to purchase the first book, unless you really would like to!
+
+Finally, purchase an account on [moblab.com](https://moblab.com) so that we can all play games in class together on common software.
+
+I leave it to you to determine your own optimal strategy in purchasing (or not) any textbooks. There is no dominant strategy here.
+
+# Assignments and Grades
+
+Your final course grade is the weighted average of the following assignments. You can find general descriptions for all the assignments on the [assignments page](http://gameF21.classes.ryansafner.com/assignments/) and more specific information and examples on each assignment's page on the [schedule page](http://gameF21.classes.ryansafner.com/schedule/). 
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
   ~Frequency,  ~Assignment, ~Weight,
-  "1"     , "Opinion-Editorial", "20%",
-  "5"  , "Homeworks", "20% (using average HW grade)",
-  "3"      , "Exams", "20% (each)"
+  "n", "Homeworks", "25% (using average HW grade)",
+  "1", "Paper", "20%",
+  "1", "Midterm Exam", "20%",
+  "3", "Final Exam", "20% (each)"
 )
 
 grading <- tribble(
@@ -110,16 +114,21 @@ assignments_total <- tibble(Assignment = "Total",
                             Percent = NA)
 
 bind_rows(assignments, assignments_total) %>% 
-  select(Assignment, Points, Percent) %>% 
-  pandoc.table(justify = "lcc", missing = "—")
+  select(Assignment, Points, Percent) %>%
+  kable(align = c("l", "c", "c")) %>% 
+  kable_styling(full_width = FALSE)
+  #pandoc.table(justify = "lcc", missing = "—")
 ```
 
 Each assignment is graded on a 100 point scale. Letter-grade equivalents are based on the following scale:
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  pandoc.table(justify = "lclc", 
-               col.names = c("Grade", "Range", "Grade", "Range"))
+  kable(align = c("l", "c", "l", "c"),
+      col.names = c("Grade", "Range", "Grade", "Range")) %>% 
+  kable_styling(full_width = FALSE)
+  #pandoc.table(justify = "lclc", 
+  #             col.names = c("Grade", "Range", "Grade", "Range"))
 ```
 
 See also my [<i class="fas fa-calculator"></i> `Grade Calculator`](https://ryansafner.shinyapps.io/306_grade_calculator/) app where you can calculate your overall grade using existing assignment grades and forecast "what if" scenarios.
@@ -132,7 +141,7 @@ There will be roughly a homework assignment every few lessons. These questions w
 
 Homeworks are generally due by 11:59 PM EST Sunday by submission to Blackboard Assignments.
 
-Please **type** your answers to the following questions in a document and **save as a PDF**^[In MS Word, or Pages, or most word processing software, File -> Save As -> PDF, or File -> Export -> PDF.] to **upload on Blackboard** under Assignments. You may handwrite answers if you will be able to scan/photograph & convert them **to a single PDF**, if they are easily readable, but this is *not preferred*. See my [guide to making a PDF](https://microS21.classes.ryansafner.com/resources/#how-to-make-a-pdf-for-submitting-assignments) - an essential skill in the modern world. If you are handwriting answers, you may print the `pdf` above and write on it, or just write on a piece of paper (we only need your answers).
+Please **type** your answers to the following questions in a document and **save as a PDF**^[In MS Word, or Pages, or most word processing software, File -> Save As -> PDF, or File -> Export -> PDF.] to **upload on Blackboard** under Assignments. You may handwrite answers if you will be able to scan/photograph & convert them **to a single PDF**, if they are easily readable, but this is *not preferred*. See my [guide to making a PDF](https://gameF21.classes.ryansafner.com/resources/#how-to-make-a-pdf-for-submitting-assignments) - an essential skill in the modern world. If you are handwriting answers, you may print the `pdf` above and write on it, or just write on a piece of paper (we only need your answers).
 
 For the few questions that ask you to draw a **graph**, *try* to do so *on your computer* (use MS Paint, the drawing tools in MS Word or MS Powerpoint, plot points in MS Excel, drawing/notetaking apps, etc.), and save it as an image to include on your homework document. Again, they need not be perfect or to scale, just show that you understand the broad idea. Being able to understand and sketch the graphs is still a very important and useful skill! If all else fails, I will be lenient in grading graph questions if you are unable to technologically include a graph. 
 
@@ -236,7 +245,7 @@ This course is intended to be accessible for all students, including those with 
 
 ## ACBSP Information 
 
-![](https://microS21.classes.ryansafner.com/images/acbsp.png)
+![](https://gameF21.classes.ryansafner.com/images/acbsp.png)
 
 Hood College is an accredited member of the Accreditation Council for Business Schools and Programs (ACBSP), an organization devoted to enhancing business education. In receiving and maintaining this accreditation, the faculty has made a commitment to the continuous improvement, innovation, and scholarship of the Department of Economics and Management. For you, this means that your educational experience undergoes ongoing validation to ensure it meets the most rigorous international standards of business education. Only a select group of institutions have received this status and it is an attribute of Hood for which you should take great pride. 
 
@@ -244,4 +253,4 @@ Pragmatically, our accreditation means that we will engage in the ongoing use of
 
 # Tentative Schedule 
 
-**You can find a full schedule** with much more details, including the readings, appendices, and other further resources for each class meeting on the [schedule page](http://microS21.classes.ryansafner.com/schedule/).
+**You can find a full schedule** with much more details, including the readings, appendices, and other further resources for each class meeting on the [schedule page](http://gameF21.classes.ryansafner.com/schedule/).
