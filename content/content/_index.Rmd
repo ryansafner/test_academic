@@ -2,7 +2,7 @@
 title: Overview
 menu:
   content:
-    parent: Course Content
+    parent: Course content
     weight: 0
 type: docs
 weight: 0
