@@ -5,7 +5,6 @@ linktitle: Tips for Success
 menu:
   resource:
     parent: Resources
-    weight: 1
 title: Tips for Success in This Course
 toc: true
 type: docs
