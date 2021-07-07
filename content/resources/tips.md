@@ -3,7 +3,7 @@ date: "2019-05-05T00:00:00+01:00"
 draft: false
 linktitle: Tips for Success
 menu:
-  resource:
+  resources:
     parent: Resources
 title: Tips for Success in This Course
 toc: true
