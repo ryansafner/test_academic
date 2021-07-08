@@ -8,4 +8,4 @@ type: docs
 weight: 1
 ---
 
-Resources are here
+Look here over the course of the semester for resources, links, and tips on how to succeed in the course, how to write well, and other things of interest related to (micro)economics.
