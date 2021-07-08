@@ -11,8 +11,8 @@ color_theme = "strawberry"
 day_night = true
 
 # Font style.
-#   Choose from `default`, `classic`, or `playfair`.
-font = "classic"
+#   Choose from `default`, `classic`, or `playfair`. # RVS added Fira 
+font = "fira"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = ""
@@ -181,13 +181,13 @@ sharing = false
   contact_policy = "E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!"
 
 [course]
-  number = "ECON 315"
-  semester = "Spring 2021"
+  number = "ECON 306"
+  semester = "Fa;; 2021"
   days = "TuTh"
   time = "2:00PM"
   # location: "Online only (thanks, COVID-19, for ruining everything)"
   dates = "June 8–July 31, 2020"
-  github = "ryansafner/lawS21"
+  github = "ryansafner/microF21"
   copyrightYear = "2021"
   slack = "https://hoodcollegeeconomics.slack.com"
 
