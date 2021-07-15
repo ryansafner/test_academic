@@ -38,4 +38,4 @@ hero_media = "micro_hex.png"
 label = "PMAP 8141 • Summer 2020<br>Andrew Young School of Policy Studies<br>Georgia State University"
 +++
 
-**Learn law & economics!**
+**Learn the workhorse models of microeconomic analysis, and apply them to **
