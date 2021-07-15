@@ -36,6 +36,6 @@ design.background:
 
 :cta_note:
   label: "ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College"
-+++
+---
 
 **Learn the workhorse models of microeconomic analysis, and apply them to the real world**
