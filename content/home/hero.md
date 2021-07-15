@@ -34,7 +34,7 @@ hero_media = "micro_hex.png"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 
-[cta_note]
+[cta.note]
   label = "ECON 306 • Fall 2021<br>George B. Delaplaine, Jr. School of Business <br> Hood College"
 +++
 
