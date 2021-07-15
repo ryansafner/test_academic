@@ -35,7 +35,7 @@ hero_media = "micro_hex.png"
 #   Remove a link/note by deleting a cta/note block.
 
 [cta_note]
-label = "PMAP 8141 • Summer 2020<br>Andrew Young School of Policy Studies<br>Georgia State University"
+  label = "ECON 306 • Fall 2021<br>George B. Delaplaine, Jr. School of Business <br> Hood College"
 +++
 
-**Learn the workhorse models of microeconomic analysis, and apply them to **
+**Learn the workhorse models of microeconomic analysis, and apply them to the real world**
