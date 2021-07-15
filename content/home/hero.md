@@ -1,6 +1,6 @@
 ---
 # Hero widget.
-widget: "hero"  # See https://sourcethemes.com/academic/docs/page-builder/
+widget: hero  # See https://sourcethemes.com/academic/docs/page-builder/
 headless: true  # This file represents a page section.
 active: true  # Activate this widget? true/false
 weight: 10  # Order that this section will appear.
@@ -8,7 +8,7 @@ weight: 10  # Order that this section will appear.
 title: "Microeconomic Analysis"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media: "micro_hex.png"
+hero_media: micro_hex.png
 
 design:
   background:
@@ -25,8 +25,9 @@ design:
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 
-cta_note:
-  label: ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College
+cta:
+  note:
+    label: ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College
 ---
 
 **Learn the workhorse models of microeconomic analysis, and apply them to the real world**
