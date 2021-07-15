@@ -183,8 +183,8 @@ sharing = false
 [course]
   number = "ECON 306"
   semester = "Fall 2021"
-  days = "MW"
-  time = "2:40 — 4:05 PM"
+  #days = "MW"
+  time = "MW 2:40 — 4:05 PM"
   location = "Rosenstock 1"
   dates = "June 8–July 31, 2020"
   github = "ryansafner/microF21"
