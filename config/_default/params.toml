@@ -178,7 +178,7 @@ sharing = false
   twitter = "ryansafner"
   github = "ryansafner"
   office = "218 Rosenstock"
-  #contact_policy = ""
+  officehours = "Office Hours: TBD"
 
 [course]
   number = "ECON 306"
