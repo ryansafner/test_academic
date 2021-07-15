@@ -19,14 +19,14 @@ design:
     # Background image.
     # image = ""  # Name of image in `static/img/`.
     # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-  text_color_light: true
+    text_color_light: true
 
 # Call to action links (optional).
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 
 cta_note:
-  label: "ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College"
+  label: ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College
 ---
 
 **Learn the workhorse models of microeconomic analysis, and apply them to the real world**
