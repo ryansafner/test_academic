@@ -55,6 +55,12 @@ ul, ol, dl {
   margin-bottom: 1rem;
 }
 
+.icon-list {
+    list-style: none;
+    text-indent: -0.7rem;
+    padding-left: 1.4rem;
+}
+
 /* Navigation bar text */
 .navbar-light {
   font-family: $sta-font-nav, sans-serif;
