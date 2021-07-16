@@ -64,7 +64,7 @@ ul, ol, dl {
 /* Navigation bar text */
 .navbar-light {
   font-family: $sta-font-nav, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
 }
@@ -72,7 +72,7 @@ ul, ol, dl {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: $sta-font-heading, sans-serif;
-  font-weight: 700;
+  /*font-weight: 700; */
   margin-top: 1rem;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -91,10 +91,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 2.25rem;
+  font-weight: 700;
 }
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 h3 {
   font-weight: 700;
