@@ -26,9 +26,10 @@ design:
 #   Remove a link/note by deleting a cta/note block.
 
 cta_note:
-  url: ""
+  url: "#schedule"
   label: ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College
 ---
 
-## ECON 306 — Microeconomic Analysis
+# ECON 306 — Microeconomic Analysis
+
 ## Learn the workhorse models of **microeconomic analysis**, and apply them to the real world
