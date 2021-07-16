@@ -13,7 +13,7 @@ hero_media: micro_hex.png
 design:
   background:
     # Background color.
-    color: "#fff"
+    #color: "#fff"
     gradient_start: "#5e81ac"
     gradient_end: "#81a1c1"
     # Background image.
@@ -24,6 +24,14 @@ design:
 # Call to action links (optional).
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
+
+:btn:
+  url: "/authors/admin"
+  label: "Know more"
+  
+btn_alt:
+  url: "#contact"
+  label: "Contact me"
 
 cta_note:
   url: "#schedule"
