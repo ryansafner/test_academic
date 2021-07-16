@@ -34,13 +34,29 @@ hero_media = "micro_hex.png"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [btn]
-  url = "/authors/admin"
-  label = "Know more"
+  url = "/schedule"
+  label = "Schedule"
   
 [btn_alt]
-  url = "#contact"
-  label = "Contact me"
+  url = "/syllabus"
+  label = "Syllabus"
 
 +++
 
 # Microeconomic Analysis
+
+## ECON 306 • Fall 2021 <br> George B. Delaplaine, Jr. School of Business <br> Hood College
+
+### Learn the common tools and techniques that economists use to model the world around you.
+
+By the end of this course, you will:
+
+1. apply the models of microeconomics (constrained optimization and equilibrium) towards explaining real world behavior of individuals, firms, & governments
+2. explore the effects of economic and political processes on market performance (competition, market prices, profits and losses, property rights, entrepreneurship, market power, market failures, public policy, government failures)
+3. apply the economic way of thinking to real world issues in writing
+
+Given these objectives, this course fulfills all three of the learning outcomes for [the George B. Delaplaine, Jr. School of Business](https://www.hood.edu/academics/departments/george-b-delaplaine-jr-school-business/student-learning-outcomes) Economics B.A. program:
+
+- Use quantitative tools and techniques in the preparation, interpretation, analysis and presentation of data and information for problem solving and decision making [...]
+- Apply economic reasoning and models to understand and analyze problems of public policy [...]
+- Demonstrate effective oral and written communications skills for personal and professional success[...]
