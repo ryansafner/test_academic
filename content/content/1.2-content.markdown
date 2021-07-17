@@ -73,7 +73,9 @@ For `\(n\)` goods, the budget set is defined as:
 
 Which we can simplify, using [summation notation](https://metricsf20.classes.ryansafner.com/class/2.1-class/#the-summation-operator), as:
 
-`$$\sum^{n}_{i=1}p_ix_i \leq m$$`
+$$
+\sum^{n}_{i=1}p_ix_i \leq m
+$$
 
 To get the limit of this set, the budget constraint, make it an equality:
 
