@@ -11,6 +11,8 @@ type: docs
 toc: true
 ---
 
+{{< toc >}} 
+
 - Section 1: *Monday, February 1, 2021*
 
 # <i class="fas fa-info-circle fa-lg"></i> Overview
