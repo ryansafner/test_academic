@@ -11,7 +11,9 @@ type: docs
 toc: true
 ---
 
-- Section 1: *Monday, February 1, 2021*
+{{% callout note %}}
+*Monday, February 1, 2021*
+{{% /callout %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
 
