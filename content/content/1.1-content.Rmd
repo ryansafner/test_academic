@@ -8,9 +8,9 @@ menu:
     parent: Course content
     weight: 2
 type: docs
-output:
-  blogdown::html_page:
-    toc: true
+#output:
+#  blogdown::html_page:
+#    toc: true
 ---
 
 - Section 1: *Monday, February 1, 2021*
