@@ -45,8 +45,7 @@ hero_media = "micro_hex.png"
 
 # Microeconomic Analysis
 
-## ECON 306 • Fall 2021
-## Hood College
+## ECON 306 • Fall 2021 • Hood College
 
 ### Learn the common tools and techniques that economists use to model the world around you.
 

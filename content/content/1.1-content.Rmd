@@ -11,9 +11,9 @@ type: docs
 toc: true
 ---
 
-{{% callout note %}}
+{{% alert note %}}
 *Monday, February 1, 2021*
-{{% /callout %}}
+{{% /alert %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
 
