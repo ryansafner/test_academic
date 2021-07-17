@@ -1,4 +1,9 @@
-{{/* Do not directly modify this file! */}}
-{{/* Instead, create a `layout/partials/custom_js.html` file in your site and add your code to it. */}}
+{{ if eq .Page.Params.shiny true}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js" type="text/javascript"></script>
+{{ end }}
 
-{{/* This partial is included in `themes/academia/layout/partials/site_js.html`. */}}
+{{- if or (.Params.math) (.Site.Params.math) -}}
+<!-- See https://bookdown.org/yihui/blogdown/templates.html#how-to for why this math-code.js is necessary -->
+{{ $script := resources.Get "js/math-code.js" }}
+<script src="{{ $script.RelPermalink }}"></script>
+{{- end -}}
