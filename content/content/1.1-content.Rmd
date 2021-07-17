@@ -10,7 +10,7 @@ menu:
 type: docs
 #output:
 #  blogdown::html_page:
-#    toc: true
+toc: true
 ---
 
 - Section 1: *Monday, February 1, 2021*
