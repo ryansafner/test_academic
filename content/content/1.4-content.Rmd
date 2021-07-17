@@ -22,7 +22,6 @@ library("tidyverse")
 library("ggrepel")
 update_geom_defaults("label", list(family = "Fira Sans Condensed"))
 ```
-yr d
 
 - Section 1: *Wednesday, February 10, 2021*
 - Section 2: *Thursday, February 11, 2021*
