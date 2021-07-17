@@ -650,8 +650,20 @@ div.alert a {
 
 /* Adding to see what happens! (AH) */
 
+// Inferno colors
+// viridisLite::viridis(8, option = "inferno", begin = 0.1, end = 0.9)
+$colors: (
+    #480B6A,  /* Dark purple */
+    #771C6D,  /* Purple */
+    #A52C60,  /* Pink */
+    #CF4446,  /* Red */
+    #EE6A24,  /* Orange */
+    #FB9E07,  /* Yellow */
+    #42159D   /* Blue */
+);
+
 #TableOfContents {
-    background-color: lighten(#CF4446, 35%);
+    background-color: lighten(nth($colors, 4, 35%);
     line-height: 1.2;
     padding-bottom: 0.5em;
 
@@ -665,7 +677,7 @@ div.alert a {
 
     li a {
         font-size: 0.85rem;
-        color: #CF4446;
+        color: nth($colors, 4);
         padding: 0.125rem 0.5rem;
 
         &:focus,
@@ -675,6 +687,22 @@ div.alert a {
 
         &.active {
             color: $sta-link-hover !important;
+        }
+    }
+}
+
+.toc-top {
+    background-color: nth($colors, 4);
+
+    li a {
+        font-size: 1.1rem;
+        color: #FFFFFF;
+        padding: 0.25rem 0.5rem;
+        line-height: 1.5;
+
+        &:focus,
+        &:hover {
+            color: #FFFFFF;
         }
     }
 }
