@@ -11,7 +11,7 @@ type: docs
 toc: true
 ---
 
-<script defer src="/static/fontawesome/fontawesome-all.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=F,
