@@ -663,7 +663,7 @@ $colors: (
 );
 
 #TableOfContents {
-    background-color: lighten(nth($colors, 4, 35%);
+    background-color: lighten(nth($colors, 4, 35%));
     line-height: 1.2;
     padding-bottom: 0.5em;
 
