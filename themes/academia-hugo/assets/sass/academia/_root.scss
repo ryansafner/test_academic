@@ -662,8 +662,10 @@ $colors: (
     #42159D   /* Blue */
 );
 
+/* TOC for docs pages, through Hugo not Pandoc */ 
+
 #TableOfContents {
-    background-color: lighten(nth($colors, 4), 35%);
+    background-color: lighten(nth($colors, 7), 35%);
     line-height: 1.2;
     padding-bottom: 0.5em;
 
@@ -677,7 +679,7 @@ $colors: (
 
     li a {
         font-size: 0.85rem;
-        color: nth($colors, 4);
+        color: #FFFFFF;
         padding: 0.125rem 0.5rem;
 
         &:focus,
@@ -692,7 +694,7 @@ $colors: (
 }
 
 .toc-top {
-    background-color: nth($colors, 4);
+    background-color: nth($colors, 7);
 
     li a {
         font-size: 1.1rem;

@@ -62,7 +62,7 @@ You can find all course materials at my **dedicated website** for this course: [
 
 My lecture slides will be shared with you, and serve as your primary resource, but our main "textbook" below is **recommended** as the next best resource and will be available from the campus bookstore. I will discuss more about textbooks and materials in the first module.
 
-## Books
+## Books {.unlisted}
 
 My lecture slides (made available to you) are the primary resource for the material and the best guide to prepare for homeworks and exams. There are two books that we will roughly be following in parallel, both available at the bookstore (or you can find them on Amazon, ebay, etc). You may choose to purchase used or old versions, but be aware that content and ordering may slightly vary across versions. 
 
