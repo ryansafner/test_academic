@@ -721,22 +721,19 @@ table.schedule .content-title {
     font-weight: bold;
 }
 
-.fake-header-table {
-    font-weight: 700;
-    /*text-transform: uppercase; CHANGED */
-    font-size: 1.25rem;
-    display: block;
-    padding-top: 1rem;
-    border-bottom: 1px solid #909090;
-    padding: 1em 0 0.25em;
-}
-
+.fake-header-table,
 td.mid-table-header {
-    text-align: center;
-    vertical-align: bottom !important;
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-weight: 600;
-    /*text-transform: uppercase; CHANGED */
+    font-weight: 700;
 }
 
+.fake-header-table {
+    font-size: 1.1rem;
+}
 
+.fake-header-table td {
+    background-color: #FFFFFF !important;
+}
+
+.section-bottom td {
+    border-bottom: 1px solid #4c566a;
+}
