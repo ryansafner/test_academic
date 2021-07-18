@@ -712,3 +712,45 @@ article span.newthought {
   text-transform: uppercase;
   font-size: 0.9em;
 }
+
+// table.schedule > tbody > tr:nth-child(2n+1) > td {
+//     background-color: #fff;
+// }
+
+table > tbody > tr:hover > td,
+table > tbody > tr:hover > th {
+    background-color: #e5e5e5 !important;
+}
+
+table.schedule tr.schedule-bg-1,
+table.schedule > tbody > tr.schedule-bg-1:nth-child(2n+1) > td {
+    background-color: lighten(nth($colors, 6), 45%);
+}
+
+table.schedule tr.schedule-bg-2,
+table.schedule>tbody>tr.schedule-bg-2:nth-child(2n+1)>td {
+    background-color: lighten(nth($colors, 2), 65%);
+}
+
+table.schedule tr.schedule-bg-3,
+table.schedule>tbody>tr.schedule-bg-3:nth-child(2n+1)>td {
+    background-color: lighten(nth($colors, 4), 40%);
+}
+
+table.schedule .content-title {
+    font-weight: bold;
+    color: nth($colors, 3);
+}
+
+.fake-header-table td {
+    padding-top: 1.8rem;
+    border-bottom: 2px solid #4c566a;
+}
+
+td.mid-table-header {
+    text-align: center;
+    vertical-align: middle !important;
+    font-size: 0.8rem;
+}
+
+
