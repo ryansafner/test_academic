@@ -721,15 +721,23 @@ table.schedule .content-title {
     font-weight: bold;
 }
 
-.fake-header-table td {
-    padding-top: 1.8rem;
-    border-bottom: 2px solid #4c566a;
+.fake-header-table {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 600;
+    /*text-transform: uppercase; CHANGED */
+    font-size: 1.25rem;
+    display: block;
+    padding-top: 1rem;
+    border-bottom: 1px solid #909090;
+    padding: 1em 0 0.25em;
 }
 
 td.mid-table-header {
     text-align: center;
-    vertical-align: middle !important;
-    font-size: 0.8rem;
+    vertical-align: bottom !important;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 600;
+    /*text-transform: uppercase; CHANGED */
 }
 
 

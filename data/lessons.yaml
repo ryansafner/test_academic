@@ -1,5 +1,5 @@
 lessons:
-  - title: '<span class="newthought">I. Rational Choice Theory: Consumers</span>'
+  - title: '<span class="fake-header-table">I. Rational Choice Theory: Consumers</span>'
     header: True
 
   - title: "Preliminary Survey"
@@ -84,7 +84,7 @@ lessons:
   - title: '<i class="fas fa-star"></i> **Exam 2** week of April 5'
     assignment: "02-exam"
 
-  - title: '<span class="content-title">III. Market Equilibrium</span>'
+  - title: '<span class="fake-header-table">III. Market Equilibrium</span>'
     header: True
 
   - title: "3.1 The Supply and Demand Model"
@@ -111,7 +111,7 @@ lessons:
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5** due Sun Apr 25'
     assignment: "05-problem-set"
 
-  - title: '<span class="content-title">IV. Imperfect Competition</span>'
+  - title: '<span class="fake-header-table">IV. Imperfect Competition</span>'
     header: True
 
   - title: "4.1 Modeling Firms with Market Power"
