@@ -5,9 +5,7 @@ citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
 output:
-  blogdown::html_document:
-    toc: true
-    toc_depth: 2
+  blogdown::html_page:
     fig_caption: false
 ---
 
