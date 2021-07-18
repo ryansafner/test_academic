@@ -66,5 +66,20 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   publication_type = "publication_types"
   author = "authors"
 
+# TOML sucks, so here's a good yaml -> toml converter:  https://www.convertsimple.com/convert-yaml-to-toml/
+
+# this is essential to render R code chunk outputs, and font-awesome on .Rmarkdown pages (like content)
+[markup]
+defaultMarkdownHandler = "goldmark"
+
 [markup.goldmark.renderer]
 unsafe = true
+
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  style = "monokai"
+
+  [markup.tableOfContents]
+  startLevel = 2
+  endLevel = 4
