@@ -97,7 +97,7 @@ Like preferences, we make 4 major assumptions about indifference curves to descr
 
 Every possible bundle (point on graph) is on an indifference curve.
 
-``` r
+```r
 IC_10=function(x){100/x}
 IC_9=function(x){81/x}
 IC_8=function(x){64/x}
