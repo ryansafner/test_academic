@@ -17,20 +17,20 @@ library(pander)
 library(kableExtra)
 ```
 
-- [<i class="fas fa-file-pdf"></i> Download as PDF](/files/syllabus-pdf.pdf)
+`r blogdown::shortcode("courseinfo")`
 
-- **Last Updated**: Febrary 1, 2021
+<p style="text-align:center;"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF of all slides</span></p>
+
+- **Last Updated**: Feburary 1, 2021
 
 > "The curious task of economics is to demonstrate to men how little they really know about what they imagine they can design."^[Hayek, F.A., 1988, *The Fatal Conceit*, p.76] <br> [— F.A. Hayek (1974 Economics Nobel Laureate)]{style="float:right"}
 
-<span class="newthought">Game theory</span> [^courseinfo] is a collection of analytical tools used to rigorously study strategic interactions between rational agents. It is one of the most useful and powerful theoretical innovations in 20^th^ century social science, and has been applied extensively in economics, political science, psychology, sociology, logic, computer science, animal behavior, and evolutionary biology. At least twelve economists have won the Nobel Prize for research directly related to game theory (and arguably more have made tangential contributions). This is an *economics* course, so the majority of our focus and applications will be in economic settings, though we will examine a much wider scope of strategic interactions than the "narrow" economic domain of firms and consumers. 
+<span class="newthought">Game theory</span> is a collection of analytical tools used to rigorously study strategic interactions between rational agents. It is one of the most useful and powerful theoretical innovations in 20^th^ century social science, and has been applied extensively in economics, political science, psychology, sociology, logic, computer science, animal behavior, and evolutionary biology. At least twelve economists have won the Nobel Prize for research directly related to game theory (and arguably more have made tangential contributions). This is an *economics* course, so the majority of our focus and applications will be in economic settings, though we will examine a much wider scope of strategic interactions than the "narrow" economic domain of firms and consumers. 
 
 Please don't get the wrong idea — this course is *not* the theory of "games" in the colloquial sense (e.g. chess, poker, football, *Fortnite*, etc)! This course is *not* designed to make a you a better [insert favorite game] player (but that may be a side effect!). A "game" in social science is defined according to certain technical criteria. Furthermore, formal game theory is *highly abstract and very mathematical*. I will try to balance formal theory with interesting real world applications, sometimes including colloquial "games."
 
 Game theory is a direct extension of basic microeconomics, so this class assumes you have met the **required prerequisite course(s) — ECON 206**. My approach to game theory requires *some* math, but it will not be exclusively about the math.
 
-[^courseinfo]: 
-  `r blogdown::shortcode("courseinfo")`
 
 # Course Format and Covid
 
