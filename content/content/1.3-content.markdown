@@ -9,6 +9,8 @@ menu:
     weight: 4
 type: docs
 toc: true
+editor_options:
+  chunk_output_type: console
 ---
 
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
@@ -97,6 +99,43 @@ Like preferences, we make 4 major assumptions about indifference curves to descr
 
 Every possible bundle (point on graph) is on an indifference curve.
 
+``` r
+IC_10=function(x){100/x}
+IC_9=function(x){81/x}
+IC_8=function(x){64/x}
+IC_7=function(x){49/x}
+IC_6=function(x){36/x}
+IC_5=function(x){25/x}
+IC_4=function(x){16/x}
+IC_3=function(x){9/x}
+IC_2=function(x){4/x}
+IC_1=function(x){1/x}
+
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC_10, geom="line", size=2)+
+  stat_function(fun=IC_9, geom="line", size=2)+
+  stat_function(fun=IC_8, geom="line", size=2)+
+  stat_function(fun=IC_7, geom="line", size=2)+
+  stat_function(fun=IC_6, geom="line", size=2)+
+  stat_function(fun=IC_5, geom="line", size=2)+
+  stat_function(fun=IC_4, geom="line", size=2)+
+  stat_function(fun=IC_3, geom="line", size=2)+
+  stat_function(fun=IC_2, geom="line", size=2)+
+  stat_function(fun=IC_1, geom="line", size=2)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_color_viridis_d(0,10)+
+  #scale_colour_manual("Curves", values = line_colors, guide=F)+
+  labs(x = "x",
+       y = "y")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
 <img src="/content/1.3-content_files/figure-html/IC-ass-1-1.png" width="576" style="display: block; margin: auto;" />
 
 Of course, this means that this entire graph is *full* of indifference curves - every single possible point is on *some* indifference curve (and this whole graph would just be a solid block of black). Naturally, it’s pointless to draw all the indifference curves, we just want to show a few to make our analysis meaningful. But the general idea comes from assumption 2 of preferences: *any two bundles can be compared*, as we can compare two points on this graph and make a judgment.
@@ -104,6 +143,47 @@ Of course, this means that this entire graph is *full* of indifference curves - 
 1.  **Indifference curves are monotonic**, which means practically that “more is preferred to less”
 
 For any bundle `\(b\)` with more of at least one good than bundle `\(a \implies a \prec b\)`. Movements to the Northeast always preferable, while movements to the Southwest always unpreferable.
+
+``` r
+points<-tribble(
+  ~letter, ~x, ~y,
+  "A", 2, 2,
+)
+
+asfill<-tibble(fx=seq(0,10,0.1),
+               fymin=4/fx,
+             fymax=rep(10, length(fx))
+)
+
+asfill2<-tibble(fx=seq(0,10,0.1),
+             fymin=rep(0, length(fx)),
+             fymax=4/fx
+)
+
+IC_as=function(x){4/x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC_as, geom="line", size=2, color="blue")+
+  geom_ribbon(data=asfill,aes(x=fx,ymin=fymin,ymax=fymax),fill="green", alpha=0.4)+
+  geom_ribbon(data=asfill2,aes(x=fx,ymin=fymin,ymax=fymax),fill="red", alpha=0.4)+
+  geom_rect(aes(xmin=0,xmax=0.4,ymin=0,ymax=10), fill="red", alpha=0.2)+
+  geom_point(data = points,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = points,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             size = 6)+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "x",
+       y = "y")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
 
 <img src="/content/1.3-content_files/figure-html/IC-ass-2-1.png" width="576" style="display: block; margin: auto;" />
 
@@ -117,6 +197,45 @@ Take our example from class, hunting for apartments. Apartment `\(A\)` is very l
 
 Mathematically, this feature is because indifference curves are normally convex. A function is **convex** when a line connecting any two points on the function lies *above* the function itself. Check the math review guide for more information.
 
+``` r
+apts4<-tribble(
+  ~letter, ~x, ~y,
+  "A", 1, 1200,
+  "B", 6, 200,
+  "C", 3, 800
+)
+IC=function(x){1200/x}
+line_colors <- c("IC" = "blue")
+
+apts<-tribble(
+  ~letter, ~x, ~y,
+  "A", 1, 1200,
+  "B", 3, 400,
+  "C", 6, 200,
+)
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC, geom="line", size=2, color="blue")+
+  geom_point(data = apts4,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = apts4,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             size = 6)+
+  geom_segment(aes(x=1, xend=6, y=1200, yend=200), linetype="dashed", color="red", size=2)+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,2000,200),
+                     limits=c(0,2000),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_colour_manual(guide=F)+
+  labs(x = "Friends Nearby",
+       y = expression(ft^2))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
 <img src="/content/1.3-content_files/figure-html/IC-as-3-1.png" width="576" style="display: block; margin: auto;" />
 
 Here’s a *challenge*: what would *non-convex* (e.g. *concave*) curves look like, and what preferences would cause that situation?
@@ -128,6 +247,39 @@ Suppose two curves crossed, as the ones below:
 - On the orange indifference curve `\\(B \sim C\\)`
 - But clearly `\\(C\\)` `\(\succ\)` .`\\(B\\)`
 - Preferences are not transitive!
+
+``` r
+points_as4<-tribble(
+  ~letter, ~x, ~y,
+  "A", 2.125, 570,
+  "B", 6, 200,
+  "C", 8, 425
+)
+
+IC_as4=function(x){(400/x)+375}
+
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC, geom="line", size=2, color="blue")+
+  stat_function(fun=IC_as4, geom="line", size=2, color="orange")+
+  geom_point(data = points_as4,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = points_as4,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             size = 6)+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,2000,200),
+                     limits=c(0,2000),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_colour_manual(guide=F)+
+  labs(x = "Friends Nearby",
+       y = expression(ft^2))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
 
 <img src="/content/1.3-content_files/figure-html/IC-as-4-1.png" width="576" style="display: block; margin: auto;" />
 
@@ -188,8 +340,25 @@ I will not ask you to formally graph indifference curves (just roughly sketch th
 **Example**: Suppose we have a typical[^3] indifference curve for apples `\((a)\)` and bananas `\((b)\)`:
 `$$u(a,b)=ab$$`
 
+``` r
+library("plotly")
+x_vec = seq(0,10,1)
+y_vec = seq(0,10,1)
+x_matrix = matrix(c(x_vec), nrow = 10, ncol = 1)
+y_matrix = matrix(c(y_vec), nrow = 1, ncol = 10)
+z_matrix = matrix(c(x_matrix %*% y_matrix),nrow=10,ncol=10)
+
+plot_ly(x = x_vec,
+           y = y_vec,
+           z = z_matrix) %>%
+  add_surface() %>%
+  layout(scene = list(xaxis = list(title="a"),
+                      yaxis = list(title="b"),
+                      zaxis = list(title="Utility")))
+```
+
 <div id="htmlwidget-1" style="width:672px;height:528px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"17817c90e81e":["function () ","plotlyVisDat"]},"cur_data":"17817c90e81e","attrs":{"17817c90e81e":{"x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"z":[[0,0,0,0,0,0,0,0,0,0],[0,1,2,3,4,5,6,7,8,9],[0,2,4,6,8,10,12,14,16,18],[0,3,6,9,12,15,18,21,24,27],[0,4,8,12,16,20,24,28,32,36],[0,5,10,15,20,25,30,35,40,45],[0,6,12,18,24,30,36,42,48,54],[0,7,14,21,28,35,42,49,56,63],[0,8,16,24,32,40,48,56,64,72],[0,9,18,27,36,45,54,63,72,81]],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"a"},"yaxis":{"title":"b"},"zaxis":{"title":"Utility"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"z":[[0,0,0,0,0,0,0,0,0,0],[0,1,2,3,4,5,6,7,8,9],[0,2,4,6,8,10,12,14,16,18],[0,3,6,9,12,15,18,21,24,27],[0,4,8,12,16,20,24,28,32,36],[0,5,10,15,20,25,30,35,40,45],[0,6,12,18,24,30,36,42,48,54],[0,7,14,21,28,35,42,49,56,63],[0,8,16,24,32,40,48,56,64,72],[0,9,18,27,36,45,54,63,72,81]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"5ee44b1e5612":["function () ","plotlyVisDat"]},"cur_data":"5ee44b1e5612","attrs":{"5ee44b1e5612":{"x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"z":[[0,0,0,0,0,0,0,0,0,0],[0,1,2,3,4,5,6,7,8,9],[0,2,4,6,8,10,12,14,16,18],[0,3,6,9,12,15,18,21,24,27],[0,4,8,12,16,20,24,28,32,36],[0,5,10,15,20,25,30,35,40,45],[0,6,12,18,24,30,36,42,48,54],[0,7,14,21,28,35,42,49,56,63],[0,8,16,24,32,40,48,56,64,72],[0,9,18,27,36,45,54,63,72,81]],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"a"},"yaxis":{"title":"b"},"zaxis":{"title":"Utility"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"z":[[0,0,0,0,0,0,0,0,0,0],[0,1,2,3,4,5,6,7,8,9],[0,2,4,6,8,10,12,14,16,18],[0,3,6,9,12,15,18,21,24,27],[0,4,8,12,16,20,24,28,32,36],[0,5,10,15,20,25,30,35,40,45],[0,6,12,18,24,30,36,42,48,54],[0,7,14,21,28,35,42,49,56,63],[0,8,16,24,32,40,48,56,64,72],[0,9,18,27,36,45,54,63,72,81]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 Each indifference curve (or contour) is one level of utility (all points on the curve give a specific level of utility). So, set that level of utility equal to some constant, `\(k\)`.
 
@@ -201,6 +370,36 @@ Then, if we are putting `\(b\)` on the vertical axis, we simply solve this for `
 
 This is the general equation for all indifference curves of this utility function: each utility level (value of `\(k)\)` can be graphed as an indifference curve with that equation. Thus, for example, for a utility level of `\(10\)`, the equation for that indifference curve is
 `$$b=\frac{10}{a}$$`.
+
+``` r
+library("mosaic")
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+
+IC_50=function(x){50/x}
+IC_25=function(x){25/x}
+IC_10=function(x){10/x}
+
+colors<-c("b=50/a" = "#20A387FF", "b=25/a" = "#39568CFF", "b=10/a" = "#481567FF")
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC_50, geom="line", size=2, aes(color = "b=50/a"))+
+  stat_function(fun=IC_25, geom="line", size=2, aes(color = "b=25/a"))+
+  stat_function(fun=IC_10, geom="line", size=2, aes(color = "b=10/a"))+
+  geom_label(aes(x=9,y=IC_50(9)), color = "#20A387FF", label="u=50", size = 6)+
+  geom_label(aes(x=9,y=IC_25(9)), color = "#39568CFF", label="u=25", size = 6)+
+  geom_label(aes(x=9,y=IC_10(9)), color = "#481567FF", label="u=10", size = 6)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_colour_manual("I.C. equations", values = colors)+
+  labs(x = "a",
+       y = "b",
+       title = "Indifference curves for u(a,b)=ab")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
 
 <img src="/content/1.3-content_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
 
