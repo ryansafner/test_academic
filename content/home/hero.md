@@ -20,7 +20,7 @@ hero_media = "micro_hex.png"
   color = "#fff"
   
   # Background gradient.
-   gradient_start = "#4bb4e3"
+   gradient_start = "#5E81AC"
    gradient_end = "#000"
   
   # Background image.
