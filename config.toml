@@ -76,7 +76,7 @@ defaultMarkdownHandler = "goldmark"
 unsafe = true
 
   [markup.highlight]
-  codeFences = true
+  #codeFences = true
   guessSyntax = true
   style = "github"
 
