@@ -8,9 +8,7 @@ menu:
     parent: Course content
     weight: 7
 type: docs
-output:
-  blogdown::html_page:
-    toc: true
+toc: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=T,
