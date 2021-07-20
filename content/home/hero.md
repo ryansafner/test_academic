@@ -21,7 +21,7 @@ hero_media = "micro_hex.png"
   
   # Background gradient.
    gradient_start = "#5E81AC"
-   gradient_end = "#fff"
+   gradient_end = "#aec0d5"
   
   # Background image.
   # image = ""  # Name of image in `static/img/`.
