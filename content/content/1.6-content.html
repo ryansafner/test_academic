@@ -104,6 +104,49 @@ output:
 <p>Recall that perfect substitutes have indifference curves that are straight lines (constant MRS), and have a utility function of:
 <span class="math display">\[u(x,y)=w_1x+w_2y\]</span></p>
 <p>Since both the budget constraint and the indifference curves are straight lines, we will not have a point of <strong>tangency</strong> between them, but a point(s) where the lines <strong>intersect</strong>.</p>
+<pre class="r"><code>library(&quot;mosaic&quot;)
+library(&quot;ggrepel&quot;)
+update_geom_defaults(&quot;label&quot;, list(family = &quot;Fira Sans Condensed&quot;))
+
+IC_s1=function(x){6-x}
+IC_s2=function(x){8-x}
+IC_s3=function(x){10-x}
+BC=function(x){4-0.5*x}
+
+point_sub&lt;-tribble(
+  ~letter, ~x, ~y,
+  &quot;A&quot;, 8, 0
+)
+#colors&lt;-c(&quot;b=50/a&quot; = &quot;#20A387FF&quot;, &quot;b=25/a&quot; = &quot;#39568CFF&quot;, &quot;b=10/a&quot; = &quot;#39568CFF&quot;)
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC_s1, geom=&quot;line&quot;, size=2, color = &quot;#481567FF&quot;)+
+  stat_function(fun=IC_s2, geom=&quot;line&quot;, size=2, color = &quot;#39568CFF&quot;)+
+  stat_function(fun=IC_s3, geom=&quot;line&quot;, size=2, color = &quot;#20A387FF&quot;)+
+  stat_function(fun=BC, geom=&quot;line&quot;, size=2, color = &quot;red&quot;)+
+  geom_label(aes(x=2,y=IC_s1(2)), color = &quot;#481567FF&quot;, label=&quot;u=6&quot;, size = 6)+
+  geom_label(aes(x=2,y=IC_s2(2)), color = &quot;#39568CFF&quot;, label=&quot;u=8&quot;, size = 6)+
+  geom_label(aes(x=2,y=IC_s3(2)), color = &quot;#20A387FF&quot;, label=&quot;u=10&quot;, size = 6)+
+  geom_label(aes(x=1,y=BC(1)), color = &quot;red&quot;, label=&quot;BC&quot;, size = 6)+
+  geom_point(data = point_sub,
+             mapping=aes(x=x, y=y),
+             size = 4)+
+  geom_text_repel(data = point_sub,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             size = 6)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  coord_cartesian(clip=&quot;off&quot;)+
+  labs(x = &quot;a&quot;,
+       y = &quot;b&quot;,
+       title = &quot;Optimal Consumption for Substitutes&quot;,
+      caption = expression(paste(u(x,y)==x+y, &quot;, &quot;, m, &quot; = $20.00, &quot;, p[x],&quot; = $2.50, &quot;, p[y],&quot; = $5.00&quot;, sep=&quot; &quot;)))+
+  theme_classic(base_family = &quot;Fira Sans Condensed&quot;, base_size=20)</code></pre>
 <p><img src="/content/1.6-content_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>There are three possible cases,</p>
 <ol style="list-style-type: decimal">
@@ -122,6 +165,44 @@ output:
 <p>Recall that perfect complements have indifference curves that are right angles, and have a utility function of:
 <span class="math display">\[u(x,y)=\min \{w_1x,w_2y\}\]</span></p>
 <p>The optimal choice must always be at the <strong>corner</strong> of the indifference “curves.”</p>
+<pre class="r"><code>library(&quot;mosaic&quot;)
+library(&quot;ggrepel&quot;)
+update_geom_defaults(&quot;label&quot;, list(family = &quot;Fira Sans Condensed&quot;))
+
+BC_c=function(x){6-x}
+
+point_comp&lt;-tribble(
+  ~letter, ~x, ~y,
+  &quot;A&quot;, 3, 3
+)
+
+ggplot(data.frame(x=c(0,5)), aes(x=x))+
+  stat_function(fun=BC_c, geom=&quot;line&quot;, size=2, color = &quot;red&quot;)+
+  geom_label(aes(x=1,y=BC_c(1)), color = &quot;red&quot;, label=&quot;BC&quot;, size = 6)+
+  geom_segment(aes(x=2, xend=2, y=10, yend=2), size=1, color=&quot;#453781FF&quot;)+
+  geom_segment(aes(x=2, xend=10, y=2, yend=2), size=1, color=&quot;#453781FF&quot;)+
+  geom_segment(aes(x=3, xend=3, y=10, yend=3), size=1, color=&quot;#20A387FF&quot;)+
+  geom_segment(aes(x=3, xend=10, y=3, yend=3), size=1, color=&quot;#20A387FF&quot;)+
+  geom_label(aes(x=9, y=2), size=6, color=&quot;#453781FF&quot;, label=&quot;u=2&quot;)+
+  geom_label(aes(x=9, y=3), size=6, color=&quot;#20A387FF&quot;, label=&quot;u=3&quot;)+
+  geom_point(data = point_comp,
+             mapping=aes(x=x, y=y),
+             size = 4)+
+  geom_text_repel(data = point_comp,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             size = 6)+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = &quot;x&quot;,
+       y = &quot;y&quot;,
+       title = &quot;Optimal Consumption for Complements&quot;,
+      caption = expression(paste(u(x,y)==min(x,y), &quot;, &quot;, m, &quot; = $20.00, &quot;, p[x],&quot; = $2.50, &quot;, p[u],&quot; = $2.50&quot;, sep=&quot; &quot;)))+
+  theme_classic(base_family = &quot;Fira Sans Condensed&quot;, base_size=20)</code></pre>
 <p><img src="/content/1.6-content_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>The consumer is purchasing equal amounts of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in this example, no matter what the prices are of either, so <span class="math inline">\(x=y\)</span>. We must satisfy the budget constraint, that <span class="math inline">\(p_xx+p_yx=m\)</span> (recall <span class="math inline">\(y=x\)</span>). Solving this for <span class="math inline">\(x\)</span> gives us the <strong>demand function for good x</strong>:</p>
 <p><span class="math display">\[q_D^x=q_D^y=\frac{m}{p_x+p_y}\]</span></p>
@@ -243,6 +324,35 @@ p_xx&amp;=0.5m\\
 p_x&amp;=0.5\frac{m}{x} \\
 \end{align*}\]</span></p>
 <p>Now we can graph a demand function for a given amount of income. As income changes, the demand curve shifts. Here are two examples, one where <span class="math inline">\(m=20\)</span> and another where <span class="math inline">\(m=40\)</span>:</p>
+<pre class="r"><code>library(&quot;mosaic&quot;)
+library(&quot;ggrepel&quot;)
+
+cd1=function(x){0.5*20/x}
+cd2=function(x){0.5*40/x}
+
+point_sub&lt;-tribble(
+  ~letter, ~x, ~y,
+  &quot;A&quot;, 8, 0
+)
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=cd1, geom=&quot;line&quot;, size=2, color = &quot;blue&quot;)+
+  stat_function(fun=cd2, geom=&quot;line&quot;, size=2, color = &quot;blue&quot;, linetype=&quot;dashed&quot;)+
+  geom_label(aes(x=3,y=cd1(3)), color = &quot;blue&quot;, label=&quot;Demand: m=20&quot;, size = 6)+
+  geom_label(aes(x=6,y=cd2(6)), color = &quot;blue&quot;, label=&quot;Demand: m=40&quot;, size = 6)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)),
+                     labels = function(x){paste(&quot;$&quot;, x, sep=&quot;&quot;)})+
+  coord_cartesian(clip=&quot;off&quot;)+
+  labs(x = &quot;Quantity of x&quot;,
+       y = &quot;Price of x&quot;,
+       title = &quot;Demand Curve&quot;,
+      caption = expression(p_x==0.5*m/x))+
+  theme_classic(base_family = &quot;Fira Sans Condensed&quot;, base_size=20)</code></pre>
 <p><img src="/content/1.6-content_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
